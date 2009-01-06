@@ -1,6 +1,7 @@
 h2. GAE Skel
 
-A lame skeleton for GAE. Lame, just because it's not complete.
+A lame skeleton for GAE.
+
 
 h3. What's in?
 
@@ -11,11 +12,15 @@ h3. What's in?
 
 WSGI implementation is based on "Match Webapp URL's Using Routes":http://appengine-cookbook.appspot.com/recipe/match-webapp-urls-using-routes/.
 
-h3. Install (to be done)
 
 h3. Usage (to be done)
 
+
+h3. TODO
+
+
 h3. Contact / License
+
 
 <pre>
  Copyright 2008, 2009 Aurelian Oancea
