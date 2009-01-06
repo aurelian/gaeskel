@@ -94,11 +94,11 @@ class WSGIApplication(object):
       response.headers['Content-Type'] , response.headers['Content-Encoding']= \
           mimetypes.guess_type('.'+format)
       controller.format= format
-
       # setup templating system
       controller.template_name= module_name.split('.').pop() + '/' + action + '.' + format
-      directory = os.path.dirname(__file__)
-      path = os.path.join(directory, os.path.join('templates'))
+      # gaeskel/../$controller-module-name/templates
+      directory = os.path.join(os.path.dirname(__file__), '..', module_name.split('.')[0])
+      path      = os.path.join(directory, os.path.join('templates'))
       controller.template_env= Environment(loader=FileSystemLoader(path))
 
       logging.info("will execute %s.%s::%s with method %s (wants: %s)" % \
