@@ -13,29 +13,66 @@ h3. What's in?
 WSGI implementation is based on "Match Webapp URL's Using Routes":http://appengine-cookbook.appspot.com/recipe/match-webapp-urls-using-routes/.
 
 
-h3. Hello World -> in progress
+h3. Hello World (in progress)
+
+h4. Warming up
 
 <pre>
 ~/Projects> git clone git://github.com/aurelian/gaeskel.git
 ~/Projects> cd gaeskel
+~/Projects/gaeskel> cp app.yaml.sample app.yaml
+</pre>
+change the application id to match yours.
+
+h4. Check your GAE!
+
+<pre>
+~/Projects/gaeskel> dev_appserver.py .
+</pre>
+
+h4. One Controller. One Action to render text.
+
+</pre>
 ~/Projects/gaeskel> mkdir helloworld
 ~/Projects/gaeskel> touch helloworld/__init__.py
 ~/Projects/gaeskel> mkdir helloworld/controllers
 ~/Projects/gaeskel> touch helloworld/controllers/__init__.py
 ~/Projects/gaeskel> cat > helloworld/controllers/foo.py
-from gaeskel.controllers import Application
+from gaeskel.controller import Application
 
-class Foo(contrllers.Application):
-  def hi:
+class Foo(Application):
+  def hi(self):
     self.render_text("Har-Har HAMEL.")
 
 ^D
 ~/Projects/gaeskel> vim config.py
 </pre>
 
+add @map.connect('/hi', controller='helloworld.controllers.foo:Foo', action='hi')@ to Routes.
+
+h4. Another Controller. And a template
+
+<pre>
+
+~/Projects/gaeskel> cat > helloworld/controllers/bar.py
+from gaeskel.controller import Application
+
+class Bar(Application):
+  
+  def hello_template(self):
+    pass
+^D
+
+~/Projects/gaeskel> mkdir -p helloworld/templates/bar
+~/Projects/gaeskel> cat > helloworld/templates/bar/hello_tempalte.html
+<p>Hello Template</p>
+^D
+
+</pre>
 
 h3. TODO
 
+ * haml?
 
 h3. Contact / License
 
