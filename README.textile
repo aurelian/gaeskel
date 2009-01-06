@@ -32,7 +32,7 @@ h4. Check your GAE!
 
 h4. One Controller. One Action to render text.
 
-</pre>
+<pre>
 ~/Projects/gaeskel> mkdir helloworld
 ~/Projects/gaeskel> touch helloworld/__init__.py
 ~/Projects/gaeskel> mkdir helloworld/controllers
