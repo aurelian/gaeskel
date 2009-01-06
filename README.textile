@@ -1,0 +1,31 @@
+h2. GAE Skel
+
+A lame skeleton for GAE. Lame, just because it's not complete.
+
+h3. What's in?
+
+ * "Routes":http://routes.groovie.org/index.html (BSD): a Python re-implementation of the Rails routes system for mapping URL's to Controllers/Actions and generating URL's.
+ * "Jinja2":http://jinja.pocoo.org/2/ (BSD): a small but fast and easy to use stand-alone template engine written in pure python.
+ * GAESkel (Apache2.0) - glue to assamble Routes and Jinja2 in GAE Environment.
+ * "Textile":http://loopcore.com/python-textile/ (BSD): a Humane Web Text Generator
+
+WSGI implementation is based on "Match Webapp URL's Using Routes":http://appengine-cookbook.appspot.com/recipe/match-webapp-urls-using-routes/.
+
+h3. Install (to be done)
+
+h3. Usage (to be done)
+
+h3. Contact / License
+
+<pre>
+ Copyright 2008, 2009 Aurelian Oancea
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+</pre>
+
+oancea at gmail dot com
+
