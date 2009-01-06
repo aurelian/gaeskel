@@ -1,3 +1,5 @@
 *.pyc
 *.swp
 *.so
+app.yaml
+index.yaml
