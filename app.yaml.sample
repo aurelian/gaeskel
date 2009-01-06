@@ -1,0 +1,13 @@
+application: To Be Replaced With Your App ID.
+version: 1
+runtime: python
+api_version: 1
+
+handlers:                                                                               
+- url: /(robots.txt|favicon.ico)
+  static_files: public/\1
+  upload: public/(robots.txt|favicon.ico)                                               
+- url: /public
+  static_dir: public
+- url: /.*
+  script: main.py
