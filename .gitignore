@@ -3,3 +3,4 @@
 *.so
 app.yaml
 index.yaml
+config.py
